@@ -32,3 +32,8 @@ void Todo::setStatus(TodoStatus desiredStatus)
 {
     this->status = desiredStatus;
 }
+
+void Todo::setTitle(std::string &desiredTitle)
+{
+    this->title = desiredTitle;
+}

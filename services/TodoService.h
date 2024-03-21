@@ -9,6 +9,7 @@ public:
     static void createTodo(vector<Todo> &todos);
     static void printInfoAboutTodos(const vector<Todo> &todos);
     static void makeTodoCompleted(vector<Todo> &todos);
+    static void changeTodoTitle(vector<Todo> &todos);
 };
 
 

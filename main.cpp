@@ -12,10 +12,11 @@ int main() {
     {
         cout << "==============================" << endl;
         cout << "Welcome to Todo console application!" << endl;
-        cout << "Choose needed option, please." << endl;
+        cout << "Choose a needed option, please." << endl;
         cout << "1. Create new task." << endl;
         cout << "2. Display info about tasks" << endl;
         cout << "3. Make task completed by its identifier" << endl;
+        cout << "4. Change task title by its identifier" << endl;
         cout << "==============================" << endl;
 
         int operation;
@@ -35,6 +36,11 @@ int main() {
         if (operation == 3)
         {
             TodoService::makeTodoCompleted(todos);
+        }
+
+        if (operation == 4)
+        {
+            TodoService::changeTodoTitle(todos);
         }
     }
 }
