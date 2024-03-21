@@ -28,7 +28,7 @@ TodoStatus Todo::getStatus()
     return this->status;
 }
 
-void Todo::makeCompleted()
+void Todo::setStatus(TodoStatus desiredStatus)
 {
-    this->status = COMPLETED;
+    this->status = desiredStatus;
 }

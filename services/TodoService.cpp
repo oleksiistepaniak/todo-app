@@ -62,3 +62,35 @@ void TodoService::printInfoAboutTodos(const vector<Todo> &todos)
 
     cout << "==============================" << endl;
 }
+
+void TodoService::makeTodoCompleted(vector<Todo> &todos)
+{
+    cout << "==============================" << endl;
+    cout << "Okay. You wanna to make Todo as completed!" << endl;
+    cout << "Please, enter a todo's identifier!" << endl;
+
+    int id;
+
+    cin >> id;
+
+    cin.ignore();
+
+    if (id >= todos.size())
+    {
+        cout << "Unfortunately, you have entered an invalid identifier! Please, try again!" << endl;
+        return;
+    }
+
+    if (todos[id].getStatus() == COMPLETED)
+    {
+        cout << "Unfortunately, you cannot make todo as completed, because it's already completed!" << endl;
+        return;
+    }
+
+    cout << "Okay, you have specified an identifier of completed task: " << id << endl;
+
+    todos[id].setStatus(COMPLETED);
+
+    cout << "You have successfully made completed Todo by identifier: " << id << endl;
+    cout << "==============================" << endl;
+}

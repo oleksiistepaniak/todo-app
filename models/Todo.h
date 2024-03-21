@@ -23,7 +23,7 @@ public:
     string getDescription();
     TodoStatus getStatus();
     Todo(int id, string &title, string &description);
-    void makeCompleted();
+    void setStatus(TodoStatus desiredStatus);
 };
 
 #endif //TODO_APP_TODO_H
