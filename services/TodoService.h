@@ -6,7 +6,8 @@
 
 class TodoService {
 public:
-    Todo createTodo(vector<Todo> &todos);
+    static void createTodo(vector<Todo> &todos);
+    static void printInfoAboutTodos(const vector<Todo> &todos);
 };
 
 
