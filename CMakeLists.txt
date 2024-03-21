@@ -6,4 +6,6 @@ set(CMAKE_CXX_STANDARD 17)
 add_executable(todo_app main.cpp
         models/Todo.cpp
         models/Todo.h
+        services/TodoService.cpp
+        services/TodoService.h
 )
