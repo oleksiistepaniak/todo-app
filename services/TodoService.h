@@ -11,6 +11,7 @@ public:
     static void makeTodoCompleted(vector<Todo> &todos);
     static void changeTodoTitle(vector<Todo> &todos);
     static void changeTodoDescription(vector<Todo> &todos);
+    static void printInfoAboutActiveTodos(vector<Todo> &todos);
 };
 
 

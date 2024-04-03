@@ -18,6 +18,7 @@ int main() {
         cout << "3. Make task completed by its identifier" << endl;
         cout << "4. Change task title by its identifier" << endl;
         cout << "5. Change task description by its identifier" << endl;
+        cout << "6. Display info about active tasks" << endl;
         cout << "==============================" << endl;
 
         int operation;
@@ -47,6 +48,11 @@ int main() {
         if (operation == 5)
         {
             TodoService::changeTodoDescription(todos);
+        }
+
+        if (operation == 6)
+        {
+            TodoService::printInfoAboutActiveTodos(todos);
         }
     }
 }

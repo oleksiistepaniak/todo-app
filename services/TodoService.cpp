@@ -78,6 +78,39 @@ void TodoService::printInfoAboutTodos(const vector<Todo> &todos)
     cout << "==============================" << endl;
 }
 
+void TodoService::printInfoAboutActiveTodos(vector<Todo> &todos)
+{
+    vector<Todo> activeTodos;
+
+    for (int i = 0; i < todos.size(); i++)
+    {
+        if (todos[i].getStatus() == ACTIVE) {
+            activeTodos.push_back(todos[i]);
+        }
+    }
+
+    if (activeTodos.empty()) {
+        cout << "Unfortunately, there is no active todos yet!" << endl;
+        return;
+    }
+
+    cout << "==============================" << endl;
+    cout << "INFORMATION ABOUT MY ACTIVE TODOS" << endl;
+
+    for (Todo todo : activeTodos)
+    {
+        string status = INDEXES_STATUSES[todo.getStatus()];
+        cout << "****************************" << endl;
+        cout << "ID: " << todo.getId() << endl;
+        cout << "TITLE: " << todo.getTitle() << endl;
+        cout << "DESCRIPTION: " << todo.getDescription() << endl;
+        cout << "STATUS: " << status << endl;
+        cout << "****************************" << endl;
+    }
+
+    cout << "==============================" << endl;
+}
+
 void TodoService::makeTodoCompleted(vector<Todo> &todos)
 {
     cout << "==============================" << endl;
