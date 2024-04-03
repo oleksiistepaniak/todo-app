@@ -25,6 +25,7 @@ public:
     Todo(int id, string &title, string &description);
     void setStatus(TodoStatus desiredStatus);
     void setTitle(string &desiredTitle);
+    void setDescription(string &desiredDescription);
 };
 
 #endif //TODO_APP_TODO_H

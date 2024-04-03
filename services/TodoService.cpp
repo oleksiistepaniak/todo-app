@@ -150,3 +150,45 @@ void TodoService::changeTodoTitle(vector<Todo> &todos)
     cout << "You have successfully changed Todo's title by identifier: " << id << endl;
     cout << "==============================" << endl;
 }
+
+void TodoService::changeTodoDescription(vector<Todo> &todos)
+{
+    cout << "==============================" << endl;
+    cout << "Okay. You wanna to change the todo's description!" << endl;
+    cout << "Please, enter a todo's identifier!" << endl;
+
+    int id;
+
+    cin >> id;
+
+    if (id >= todos.size())
+    {
+        cout << "Unfortunately, you have entered an invalid identifier! Please, try again!" << endl;
+        return;
+    }
+
+    cin.ignore();
+
+    cout << "Okay, you have specified an identifier of task (which description should be changed): " << id << endl;
+    cout << "Current description of todo's by id: " << id << " is " << todos[id].getDescription() << endl;
+    cout << "Please, now enter a new description of todo's" << endl;
+
+    string description;
+
+    getline(cin, description);
+
+    if (description.empty() || description.length() < MIN_DESCRIPTION_LENGTH)
+    {
+        cout << "Unfortunately, you have entered an invalid description! Description cannot be empty."
+                " Min length is 5 symbols!" << endl;
+        return;
+    }
+
+    cout << "Okay, you have specified the new description for task by id: " << id << ". New description: "
+        << description << endl;
+
+    todos[id].setDescription(description);
+
+    cout << "You have successfully changed Todo's description by identifier: " << id << endl;
+    cout << "==============================" << endl;
+}

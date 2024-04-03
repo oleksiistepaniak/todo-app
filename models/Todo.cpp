@@ -37,3 +37,8 @@ void Todo::setTitle(std::string &desiredTitle)
 {
     this->title = desiredTitle;
 }
+
+void Todo::setDescription(std::string &desiredDescription)
+{
+    this->description = desiredDescription;
+}
